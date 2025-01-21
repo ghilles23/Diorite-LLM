@@ -2,10 +2,10 @@ from pipeline_QA import ask_question
 
 if __name__ == "__main__":
     print("Welcome to Diorite")
-    context = input("Enter a question: ")
+    context = input("Enter the Context ")
 
     while True:
-        question = input("\Ask Question:")
+        question = input("Ask your question: ")
         if question.lower() == 'exit':
             print("Goodbye")
             break

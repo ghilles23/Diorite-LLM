@@ -2,6 +2,6 @@ from transformers import pipeline
 
 pipeline_QA = pipeline("question-answering", model = "distilbert-base-uncased-distilled-squad")
 
-def askQ(question, context):
+def ask_question(question, context):
     result = pipeline_QA(question = question, context = context)
     return result["answer"]
