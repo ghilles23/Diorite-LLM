@@ -6,10 +6,10 @@ if __name__ == "__main__":
 
     while True:
         question = input("\Ask Question:")
-        if question.lower() == 'exit'
+        if question.lower() == 'exit':
             print("Goodbye")
             break
         answer = ask_question(question, context)
         print(f"Answer: {answer}")
-        
+
 
