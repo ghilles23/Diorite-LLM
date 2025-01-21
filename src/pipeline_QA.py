@@ -1,7 +1,7 @@
 from transformers import pipeline
 
-pipeline_QA = pipeline("question-answering", model = "distilbert-base-uncased-distilled-squad")
+gpt_pipeline = pipeline("text-generation", model = "gpt2")
 
-def ask_question(question, context):
-    result = pipeline_QA(question = question, context = context)
-    return result["answer"]
+def ask_question(prompt):
+    result = gpt_pipeline(prompt, max_length=100, num_return_sequences = 1)
+    return result[0]["generated_)text"]

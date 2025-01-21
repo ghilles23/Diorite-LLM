@@ -2,14 +2,12 @@ from pipeline_QA import ask_question
 
 if __name__ == "__main__":
     print("Welcome to Diorite")
-    context = input("Enter the Context ")
-
     while True:
-        question = input("Ask your question: ")
-        if question.lower() == 'exit':
+        prompt = input("Ask your question, or type exit to quit: ")
+        if prompt.lower() == 'exit':
             print("Goodbye")
             break
-        answer = ask_question(question, context)
-        print(f"Answer: {answer}")
+        response = ask_question(prompt)
+        print(f"Answer: {response}")
 
 
