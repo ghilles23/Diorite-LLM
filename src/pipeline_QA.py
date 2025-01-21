@@ -1,7 +1,11 @@
-from transformers import pipeline
-
-gpt_pipeline = pipeline("text-generation", model = "gpt2")
+import openai
 
 def ask_question(prompt):
-    result = gpt_pipeline(prompt, max_length=100, num_return_sequences = 1)
-    return result[0]["generated_)text"]
+    openai.api_key = "proj_NNLJ1e3oL6Nj5WA0LyF7tXJv"
+    response = openai.ChatCompletion.create(
+        engine="gpt-4",
+        prompt = prompt,
+        max_tokens=100
+    )
+    print(response)
+    return response.choices[0].text.strip()

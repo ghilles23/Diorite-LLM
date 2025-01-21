@@ -9,5 +9,3 @@ if __name__ == "__main__":
             break
         response = ask_question(prompt)
         print(f"Answer: {response}")
-
-
